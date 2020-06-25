@@ -4,7 +4,7 @@
 //
 // This is a set of tools to quickly outline cells, segment mitochondria,
 // quantify their morphology, and save the results.
-//
+// It was developed specifically for the research published in https://doi.org/10.1093/nar/gkz1128
 // Dependencies:
 // mask2convex_hull.groovy script (should be provided with this script)
 // ImageScience update site activated
@@ -41,7 +41,7 @@ var maxJunkSolidity = 0.8;
 // minimum skeletonized length of filamentous mitochondria (micrometers)
 var thresholdNetworkLength = 11;
 
-// combined constraints on length (micrometers), width (micrometers) 
+// combined constraints on length (micrometers), width (micrometers)
 // and solidity of filaments
 var minNetworkLength = 5;
 var minNetworkLinearExtension = 1.5;
@@ -54,7 +54,7 @@ var maxPunctaLinearExtension = 1.2;
 var minPunctaCircularity = 0.5;
 var maxPunctaAspectRatio = 3;
 
-// combined constraints on area (squared micrometers), range of allowed 
+// combined constraints on area (squared micrometers), range of allowed
 // skeletonized lengths (micrometers), circularity, aspect ratio and solidity
 // of swollen mitochondria
 var minSwollenArea = 1.2;
@@ -427,7 +427,7 @@ function segmentMitochondria () {
     run("Enhance Local Contrast (CLAHE)", "blocksize="+CLAHEKernel+" histogram=256 maximum=3 mask=*None* fast_(less_accurate)"); //10
     setAutoThreshold("Yen dark");
   }
-  
+
   run("Convert to Mask");
   segmID = getImageID();
   rename(imgTitle+"_"+suffix+" - mitochondria");
@@ -639,7 +639,7 @@ function isRoiDuplicate(nr) {
 
 
 function calculateUnitConversion(imgTitle,unit){
-  //NOTE: currently the toolset is hardcoded to only accept images with units 
+  //NOTE: currently the toolset is hardcoded to only accept images with units
   // in micrometers
   unitFactor = 1;
   if (unit == "microns" || unit == getInfo("micrometer.abbreviation")) {
