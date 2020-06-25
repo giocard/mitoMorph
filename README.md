@@ -14,7 +14,7 @@ More information is available in the User Guide.
 A complete User Guide can be downloaded in PDF format.
 
 ## Reference
-Yim A., Koti P., Bonnard A., Duerrbaum M., Mueller C., Villaveces J., Gamal S., Cardone G., Perocchi F., Storchova Z., Habermann B.H., _mitoXplorer, a visual data mining platform to systematically analyze and visualize mitochondrial expression dynamics and mutations_ **In preparation**
+Yim A., Koti P., Bonnard A., Marchiano F., Duerrbaum M.,Garcia-Perez C., Villaveces J., Gamal S., Cardone G., Perocchi F., Storchova Z., Habermann B.H., _mitoXplorer, a visual data mining platform to systematically analyze and visualize mitochondrial expression dynamics and mutations_ **Nucleic Acid Res** 2020 48:65-632 https://doi.org/10.1093/nar/gkz1128
 
 ## License
 This package is free and open source software, licensed under GPL.
